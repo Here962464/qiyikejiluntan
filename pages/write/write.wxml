@@ -1,0 +1,6 @@
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea auto-height='true' class='textContent' placeholder="form 中的 textarea" name="textarea"/>
+    <button size="mini" hover-class="confirm_after" class='confirm' form-type="submit"> 发布 </button>
+  </form>
+</view>

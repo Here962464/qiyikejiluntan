@@ -1,0 +1,10 @@
+<view>
+	<!-- <view class='classify'>帖子分类</view> -->
+	<!-- <view class='backTo' catchtap='backTo'>{{backToMention}}</view> -->
+	<view class='listModuleBox'>
+		<view catchtap='toSon' class='listModule' id="{{item.id}}" data-name="{{item.name}}" wx:key="{{item.parent_id}}" data-pid="{{item.parent_id}}" wx:for="{{info}}">
+			<image class='listIcon' src="{{item.icon}}"></image>
+			<view class='listName'>{{item.name}}</view>
+		</view>
+	</view>
+</view>

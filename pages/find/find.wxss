@@ -1,0 +1,46 @@
+view{
+	font-size: 28rpx;
+	color: rgb(53,53,53);
+}
+.classify{
+	width: 100%;
+	padding: 40rpx 0;
+	text-align: center;
+	font-size: 32rpx;
+}
+/* .backTo{
+	color: midnightblue;
+	font-size: 32rpx;
+	margin: 10rpx;
+	padding:40rpx;
+	border-radius: 8rpx;
+
+} */
+.listModuleBox{
+	margin-top: 40rpx;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	padding-bottom: 20rpx;
+	flex-wrap: wrap;
+}
+.listModule{
+	width: 47%;
+	text-align: center;
+	margin-bottom: 40rpx;
+	/* box-shadow: 0 0 6rpx #ccc; */
+	margin-left: 2%;
+	border-radius: 8rpx;
+}
+.listIcon{
+	width:70%;
+	height: 250rpx;
+	/* margin-top: 20rpx; */
+	border-radius: 8rpx;
+	box-shadow: 0rpx 0rpx 8rpx #ccc;
+}
+.listName{
+	padding: 20rpx 0;
+	font-size: 34rpx;
+	/* font-weight: bold; */
+}

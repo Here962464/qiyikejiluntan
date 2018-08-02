@@ -1,0 +1,23 @@
+/* pages/write/write.wxss */
+.textContent{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	padding: 20rpx;
+	margin-top: 60rpx;
+}
+.confirm{
+	position: absolute;
+	top: 10rpx;
+	right: 20rpx;
+	outline: none;
+	border: none;
+	font-size: 28rpx;
+	background: #fff;
+	color: #409eff;
+	padding: 0 40rpx;
+}
+.confirm_after{
+	background: #409eff;
+	color: #fff;
+}

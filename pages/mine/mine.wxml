@@ -1,0 +1,23 @@
+<view class='container'>
+    <view class='head'>
+      <view class='leftBox'>
+          <image src='../../images/avatar.jpg' class='avatar'></image>
+      </view>
+      <view class='rightBox'>
+          <view class='nickName'>赵蜜</view>
+          <view class='info'>什么也没写</view>
+      </view>
+      <image class='edit' src='../../images/go.png'></image>
+    </view>
+    <view class='content'>
+        <view class='integral'>
+            <image src="../../images/integral.png"></image>积分：500
+        </view>
+        <view class='balance'>
+            <image src="../../images/balance.png"></image>余额：0
+        </view>
+        <view catchtap='toMyList' class='myArticle'>
+            <image src="../../images/myArticle.png"></image>我发表的文章<image class="edit" src="../../images/go.png"></image>
+        </view>
+    </view>
+</view>

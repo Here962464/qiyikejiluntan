@@ -1,0 +1,42 @@
+{
+  "pages":[
+	"pages/index/index",
+	"pages/write/write",
+	"pages/mine/mine",
+	"pages/find/find",
+	"pages/articleList/articleList",
+    "pages/articleDetail/articleDetail",
+    "pages/myArticle/myArticle"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#409eff",
+    "navigationBarTitleText": "七蚁科技",
+    "navigationBarTextStyle":"white",
+	"enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath":"images/list.png",
+        "selectedIconPath":"images/list-active.png"
+      },
+	  {
+		"pagePath": "pages/find/find",
+		"text": "",
+		"iconPath": "images/find.png",
+		"selectedIconPath": "images/find-active.png"
+	  },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-active.png"
+      }
+    ],
+    "backgroundColor": "rgb(240,242,245)",
+	"borderStyle":"white"
+  }
+}

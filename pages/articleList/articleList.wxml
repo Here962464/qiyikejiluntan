@@ -1,0 +1,40 @@
+<view class="articleList">
+	<!-- 如果没有文章 -->
+	<view style='height:{{curHeight}}px;' wx:if="{{noArticle}}" class='noArticle'>
+		<text>这里空空如也~赶快发表属于自己的帖子吧</text>
+		<view class='addArticle'>+</view>
+	</view>
+	<view wx:else class='listsBlock'>
+		<scroll-view scroll-y bindscrolltolower="lazyLoad" style='height:{{curHeight}}px;'>
+			<view catchtap='backTo' class='backTo'>{{backTo}}</view>
+			<view class='classGroup'>
+				<view catchtap='goToSonClass' id="{{item.id}}" data-name="{{item.name}}" data-pid="{{item.parent_id}}" class='groupLists' wx:for="{{groupLists}}">
+					<!-- <image class='classIcon' src="{{item.icon}}"></image> -->
+					<view class='className'>{{item.name}}</view>
+				</view>
+			</view>
+			<view style='height:{{curHeight}}px;' wx:if="{{noList}}" class='noArticle'>
+				<text>这里空空如也~赶快发表属于自己的帖子吧</text>
+				<view class='addArticle'>+</view>
+			</view>
+			<view wx:else>
+				<view class='mention'>文章列表</view>
+				<view catchtap='goToDetail' id="{{item.id}}" class='listItem' wx:for="{{info}}">
+					<view class='itemTop'>
+						<image class='avatar' src='{{item.avatar}}'></image>
+						<view class='nickName'>{{item.userName}}</view>
+					</view>
+					<view class='content'>
+						<view class='contentDetail'>{{item.title}}</view>
+						<view class='baseInfo'>
+							<view class='parse'>{{item.comment_count}} 赞</view>
+							<view class='comment'>{{item.comment_count}} 评论</view>
+							<view class='creatime'>{{item.create_time}}</view>
+						</view>
+					</view>
+				</view>
+				<view wx:if="{{hasBaseLine}}" class='baseLine'>-------------我是有底线的------------</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>

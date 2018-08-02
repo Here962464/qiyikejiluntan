@@ -1,0 +1,67 @@
+view{
+  font-size: 32rpx;
+}
+/* 头部样式 */
+.head{
+  display: flex;
+  background: #fff;
+  align-content: center;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  border-bottom: 2rpx solid #eee;
+  box-shadow: 2rpx 2rpx 6rpx #eee;
+  position: relative;
+
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.rightBox{
+  margin-left: 20rpx;
+}
+.nickName{
+  font-size: 32rpx;
+  font-family: "微软雅黑"
+}
+.info{
+  color:#aaa;
+  padding: 6rpx 0;
+  font-size: 28rpx;
+}
+.edit{
+  position: absolute;
+  right: 30rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+/* content */
+.content{
+  background: #fff;
+  padding: 20rpx 0;
+  margin-top: 50rpx;
+  border-top: 2rpx solid #eee;
+  box-shadow:0rpx 0rpx  6rpx 2rpx #eee;
+}
+.integral,.balance{
+  padding: 40rpx;
+  border-bottom: 2rpx solid #eee;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.integral image,.balance image,.myArticle image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.myArticle{
+  display: flex;
+  padding: 40rpx;
+  align-content: center;
+  align-items: center;
+}
+.myArticle .edit{
+  margin-right: 0;
+}

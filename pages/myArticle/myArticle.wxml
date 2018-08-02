@@ -1,0 +1,28 @@
+<view class="articleList">
+	<!-- 如果没有文章 -->
+	<view style='height:{{curHeight}}px;' wx:if="{{noArticle}}" class='noArticle'>
+		<text>这里空空如也~赶快发表属于自己的帖子吧</text>
+		<view catchtap='writeArticle' class='addArticle'>+</view>
+	</view>
+	<view wx:else class='listsBlock'>
+		<scroll-view scroll-y bindscrolltolower="lazyLoad" style='height:{{curHeight}}px;'>
+			<view>
+				<view catchtap='goToDetail' id="{{item.id}}" class='listItem' wx:for="{{info}}">
+					<view class='content'>
+						<view class='contentDetail'>{{item.title}}</view>
+						<view class='baseInfo'>
+							<view class='parse'>{{item.comment_count}} 赞</view>
+							<view class='comment'>{{item.comment_count}} 评论</view>
+							<view class='creatime'>{{item.create_time}}</view>
+							<view class='editBox'>
+								<view class='edit' id="{{item.id}}" catchtap='edit'><image src='../../images/edit.png'></image> 编辑</view>
+								<view class='deleteArticle' id="{{item.id}}" catchtap='deleteArticle'><image src='../../images/delete.png'></image> 删除</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view wx:if="{{hasBaseLine}}" class='baseLine'>-------------我是有底线的------------</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>

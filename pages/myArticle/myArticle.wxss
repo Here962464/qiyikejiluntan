@@ -1,0 +1,81 @@
+.noArticle{
+	width: 100%;
+	text-align: center;
+	font-size: 32rpx;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	/* 换行 */
+	flex-warp:warp; 
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+.noArticle text{
+	width: 100%;
+	padding: 10rpx 50rpx;
+}
+.addArticle{
+	font-size: 100rpx;
+	color: #409eff;
+}
+.contentDetail{
+	padding: 40rpx;
+}
+.listItem{
+	padding: 40rpx 0;
+	font-size: 28rpx;
+	box-shadow: 0 0 10rpx #eee;
+}
+.itemTop{
+	display: flex;
+	padding: 0 20rpx;
+	align-content: center;
+	align-items: center;
+}
+.avatar{
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 50%;
+}
+.baseInfo{
+	display: flex;
+	align-items: center;
+	font-size: 28rpx;
+	color: #aaa;
+	position: relative;
+}
+.parse,.comment,.creatime{
+	margin-left: 20rpx;
+}
+.editBox{
+	position: absolute;
+	right: 20rpx;
+	top:0;
+	display: flex;
+	align-items: center;
+	font-size: 28rpx;
+	color: #aaa;
+}
+.edit,.deleteArticle{
+	padding:0 20rpx;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+.edit image,.deleteArticle image{
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 4rpx;
+}
+.baseLine{
+	color:#aaa;
+	font-size: 28rpx;
+	padding: 20rpx 0;
+	text-align: center;
+}
+.mention{
+	font-size: 28rpx;
+	padding: 20rpx;
+}

@@ -1,0 +1,11 @@
+<import src="wxParse/wxParse.wxml"/>
+<view class='blogDetails'>
+  <view class='blogTitle'>{{title}}</view>
+  <view class='floor1'>
+    <!-- <view class='blogNature'>{{nature}}</view> -->
+    <view class='classAA'>{{class_name}}</view>
+    <!-- <view class='classAa'>{{classAa}}</view> -->
+  </view>
+  <view class='blogUpdateDate'>{{create_time}}</view>
+  <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+</view> 

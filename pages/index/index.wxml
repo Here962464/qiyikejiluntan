@@ -1,0 +1,38 @@
+<view class='top_tab' >
+  	<view class="top_item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{info}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="switchTab">{{item.class_name}}</view>
+</view>
+<scroll-view bindscrolltolower="lazyLoad" style='height:{{clientHeight}}px;' class='sv'>
+ 	<!-- <view class='zhanwei'></view> -->
+  	<swiper style='height:{{clientHeight}}px;' duration='500' current="{{currentNavtab}}" bindchange="swiperTab">
+    	<swiper-item wx:for="{{info}}">
+			<image class='item_icon' src='{{item.icon}}'></image>
+			<view wx:for-item="posts" id="{{posts.id}}" catchtap='toDetail'  wx:for="{{item.posts}}">
+				<view class='con'>
+					<view class='con_title'>
+						<image src='{{posts.class_icon}}'></image>
+						<text>{{posts.user_name}}</text>
+					</view>
+					<view class='con_content'>
+						<view class='question'>
+							<a class="question-link">
+								<text>{{posts.title}}</text>
+							</a>
+						</view>
+						<view class='answer_body'>
+							<rich-text nodes="{{posts.content}}"></rich-text>
+							<view class="answer-actions">
+								<view class="like dot">
+									<a>{{posts.view_count}} 赞同 </a>
+								</view>
+								<view class="comments dot">
+									<a>{{posts.comment_count}} 评论 </a>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class='zhanwei'></view>
+			</view>
+    	</swiper-item>
+  </swiper>
+</scroll-view>

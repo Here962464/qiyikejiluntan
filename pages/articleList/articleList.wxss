@@ -1,0 +1,105 @@
+.articleList{
+	 
+}
+.noArticle{
+	width: 100%;
+	text-align: center;
+	font-size: 32rpx;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	/* 换行 */
+	flex-warp:warp; 
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+.noArticle text{
+	width: 100%;
+	padding: 10rpx 50rpx;
+}
+.addArticle{
+	font-size: 100rpx;
+	color: #409eff;
+}
+.classGroup{
+	padding: 40rpx 10rpx;
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	/* 换行 */
+	flex-warp:warp; 
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	font-size: 32rpx;
+	border-bottom: 2rpx solid #eee;
+}
+.backTo{
+	color: midnightblue;
+	font-size: 32rpx;
+	margin: 10rpx;
+	padding:20rpx;
+	padding-bottom: 0;
+}
+.groupLists{
+	margin-left: 3%;
+	border: 2rpx solid #eee;
+	border-radius: 8rpx;
+	margin-bottom: 20rpx;
+	background: #eee;
+	/* border: 2rpx solid #409eff; */
+	padding: 10rpx 40rpx;
+}
+.classIcon{
+	width: 100%;
+	height: 100rpx;
+}
+.className{
+	width: 100%;
+	text-align: center;
+}
+.contentDetail{
+	padding: 40rpx;
+}
+.listItem{
+	padding: 40rpx 0;
+	font-size: 28rpx;
+	box-shadow: 0 0 10rpx #eee;
+}
+.itemTop{
+	display: flex;
+	padding: 0 20rpx;
+	align-content: center;
+	align-items: center;
+}
+.avatar{
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 50%;
+}
+.baseInfo{
+	display: flex;
+	align-items: center;
+	font-size: 28rpx;
+	color: #aaa;
+	position: relative;
+}
+.parse,.comment,.creatime{
+	margin-left: 20rpx;
+}
+.creatime{
+	position: absolute;
+	right: 20rpx;
+	top: 0;
+}
+.baseLine{
+	color:#aaa;
+	font-size: 28rpx;
+	padding: 20rpx 0;
+	text-align: center;
+}
+.mention{
+	font-size: 28rpx;
+	padding: 20rpx;
+}
