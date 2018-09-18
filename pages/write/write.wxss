@@ -1,14 +1,12 @@
 /* pages/write/write.wxss */
-.textContent{
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	padding: 20rpx;
-	margin-top: 60rpx;
+.section{
+	color: rgb(80, 80, 80);
+	font-size: 36rpx;
+	padding: 100rpx 40rpx 20rpx 40rpx;
 }
 .confirm{
 	position: absolute;
-	top: 10rpx;
+	top: 20rpx;
 	right: 20rpx;
 	outline: none;
 	border: none;
@@ -20,4 +18,55 @@
 .confirm_after{
 	background: #409eff;
 	color: #fff;
+}
+.line{
+	/* width: 100%;
+	height: 2rpx;
+	padding: 0 40rpx;
+	margin: 0 0 30rpx -40rpx;
+	background: #eee; */
+}
+.title{
+	display: flex;
+	align-content: center;
+	align-items: center;
+	position: relative;
+}
+.title input{
+	flex: 1;
+	padding: 5rpx 50rpx 5rpx 20rpx;
+}
+.mentioncolor{
+	color:#f16773;
+}
+.titleMax{
+	position: absolute;
+	right: 10rpx;
+	color: #aaa;
+}
+.classifyBox{
+	width: 100%;
+	height: 200rpx;
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+.pickerBox{
+	/* margin: 0 10rpx; */
+	flex: 1;
+	height: 200rpx;
+	line-height: 70rpx;
+}
+.pickerBox_item{
+	height: 70rpx;
+	border: 2rpx solid #fff;
+}
+.textContent{
+	margin-top: 10rpx;
+	border-top: 2rpx dashed #eee;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	padding: 40rpx 0;
+	line-height: 56rpx;
 }

@@ -1,12 +1,14 @@
 {
   "pages":[
+	"pages/mine/mine",
+	"pages/editInfo/editInfo",
+	"pages/find/find",
 	"pages/index/index",
 	"pages/write/write",
-	"pages/mine/mine",
-	"pages/find/find",
 	"pages/articleList/articleList",
     "pages/articleDetail/articleDetail",
-    "pages/myArticle/myArticle"
+    "pages/myArticle/myArticle",
+    "pages/conmment/conmment"
   ],
   "window":{
     "backgroundTextStyle":"light",

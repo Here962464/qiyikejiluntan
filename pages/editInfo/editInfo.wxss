@@ -1,0 +1,36 @@
+/* pages/editInfo/editInfo.wxss */
+.infoBox{
+	width: 100vw;
+	height: 100vh;
+	background: rgb(240, 243, 245);
+	color: rgb(53,53,53);
+	font-size: 32rpx;
+}
+.avatar{
+	background: #fff;
+	display: flex;
+	align-items: center;
+	
+	position: relative;
+	height: 150rpx;
+	padding: 0 40rpx;
+	margin-top: 40rpx;
+}
+.avatar_img{
+	position: absolute;
+	right: 40rpx;
+	width: 100rpx;
+	height: 100rpx;
+}
+.nickname,.info{
+	width: 100%;
+	margin-top: 40rpx;
+	background: #fff;
+	padding: 40rpx;
+	position: relative;
+}
+.username,.info_text{
+	position: absolute;
+	right: 12s0rpx;
+	color:#8a8a8a;
+}

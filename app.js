@@ -47,5 +47,11 @@ App({
 	articleId:0,
 	//所有分类
 	copyIdGroup:[],
+	//sessionId
+	sid:"",
+	//userId
+	uid:"",
+	//用户名
+	username:"匿名人士"
   }
 })

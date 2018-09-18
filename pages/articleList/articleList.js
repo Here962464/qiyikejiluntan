@@ -56,7 +56,9 @@ Page({
 		//文章列表
 		noList:false
   	},
-
+	onshow: function(){
+		this.requestLoad();
+	},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -218,6 +220,21 @@ Page({
 			})
 		}
 		
+	},
+	//写文章
+	gotoWrite: function(){
+		var sid = app.globalData.sid;
+		console.log(sid)
+		if(sid == ""){
+			wx.showModal({
+				title: '提示',
+				content: '您还未登录，请先登录！',
+			})
+		}else{
+			wx.navigateTo({
+				url: '../write/write',
+			})
+		}
 	},
 	requestLoad: function(){
 		var that = this;

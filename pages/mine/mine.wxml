@@ -1,5 +1,5 @@
 <view class='container'>
-    <view class='head'>
+    <view class='head' catchtap='editInfo'>
       <view class='leftBox'>
           <image src='../../images/avatar.jpg' class='avatar'></image>
       </view>

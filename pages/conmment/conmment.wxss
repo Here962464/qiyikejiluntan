@@ -1,0 +1,35 @@
+/* pages/conmment/conmment.wxss */
+.conmmentBox{
+	width: 100vw;
+	height: 100vh;
+	background: rgb(240, 243, 245);
+	overflow: hidden;
+	font-size: 32rpx;
+}
+.top{
+	position: relative;
+	overflow: hidden;
+	padding: 40rpx;
+	background: #fff;
+}
+textarea{
+	width: 100%;
+	background: #fff;
+}
+.limit{
+	position: absolute;
+	bottom: 0;
+	right: 20rpx;
+	color: #aaa;
+	font-size: 28rpx;
+}
+.bottom{
+	width: 100%;
+	text-align: center;
+	margin-top: 100rpx;
+}
+.submit{
+	width: 40%;
+	background: #409eff;
+	color: #fff;
+}

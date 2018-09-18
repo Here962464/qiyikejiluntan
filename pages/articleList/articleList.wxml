@@ -1,8 +1,8 @@
 <view class="articleList">
 	<!-- 如果没有文章 -->
 	<view style='height:{{curHeight}}px;' wx:if="{{noArticle}}" class='noArticle'>
-		<text>这里空空如也~赶快发表属于自己的帖子吧</text>
-		<view class='addArticle'>+</view>
+		<text>这里空空如也~</text>
+		<!-- <view catchtap='gotoWrite' class='addArticle'>+</view> -->
 	</view>
 	<view wx:else class='listsBlock'>
 		<scroll-view scroll-y bindscrolltolower="lazyLoad" style='height:{{curHeight}}px;'>
@@ -14,8 +14,8 @@
 				</view>
 			</view>
 			<view style='height:{{curHeight}}px;' wx:if="{{noList}}" class='noArticle'>
-				<text>这里空空如也~赶快发表属于自己的帖子吧</text>
-				<view class='addArticle'>+</view>
+				<text>这里空空如也~</text>
+				<!-- <view class='addArticle'>+</view> -->
 			</view>
 			<view wx:else>
 				<view class='mention'>文章列表</view>

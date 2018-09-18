@@ -20,7 +20,11 @@
 	color: #409eff;
 }
 .contentDetail{
-	padding: 40rpx;
+	padding: 20rpx;
+	position: relative;
+	padding-right: 170rpx;
+	display: flex;
+	align-items: center;
 }
 .listItem{
 	padding: 40rpx 0;
@@ -77,5 +81,20 @@
 }
 .mention{
 	font-size: 28rpx;
+	padding: 20rpx;
+}
+.contentText{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.onxamine,.examineerr{
+	position: absolute;
+	right: 10rpx;
+	margin-left: 20px;
+	color: rgb(247,150,104);
+}
+.character{
+	color: rgb(154,154,154);
 	padding: 20rpx;
 }

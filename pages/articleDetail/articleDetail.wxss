@@ -55,3 +55,96 @@
 	width: 100vw;
   	height: auto; 
 } 
+rich-text,.rich-text-wrp {
+	padding: 20rpx 40rpx;
+}
+/* 评论 */
+.conmmentAmount{
+	font-size: 32rpx;
+	padding: 40rpx;
+}
+.showConmment{
+	font-size: 32rpx;
+	border-top: 40rpx solid rgb(240,245,249);
+	padding-bottom: 200rpx;
+}
+.conmmen_item{
+	
+}
+.conmmentBlock{
+	margin: 40rpx 20rx;
+	border-top: 2rpx solid #ccc;
+}
+.top{
+	display: flex;
+	align-items: center;
+	align-content: center;
+	padding: 40rpx;
+}
+.avatar{
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+}
+.right{
+	margin-left: 20rpx;
+	color: #3f3e3e;
+}
+.nickName{
+	
+}
+.reply{
+	color: #aaa;
+}
+.time{
+	font-size: 28rpx;
+	padding: 10rpx 0;
+	color: #aaa;
+}
+.conmmentContent{
+	padding: 0 40rpx;
+}
+.toConmment,.toParse,.toDelete{
+	display: flex;
+	align-items: center;
+}
+.toConmmentBox{
+	padding: 40rpx 40rpx 40rpx 20rpx;
+	display: flex;
+	align-items: center;
+	color: #8a8a8a;
+}
+.toConmmentBox image{
+	width: 45rpx;
+	height: 45rpx;
+	margin:0 4rpx 0 20rpx;
+}
+.conmmentBox{
+	background: #fff;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	border-top: 2rpx solid #ccc;
+}
+.conmment,.parse{
+	width: 50%;
+	padding: 20rpx;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #8a8a8a;
+	align-content: center;
+	justify-content:center;
+}
+.conmment{
+	border-right: 2rpx solid #ccc;
+}
+.conmment image,.parse image{
+	width: 50rpx;
+	height: 50rpx;
+}

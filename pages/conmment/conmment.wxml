@@ -1,0 +1,10 @@
+<view class="conmmentBox">
+	<view class='top'>
+		<textarea maxlength='255' auto-focus bindblur='getContent' placeholder="{{textHolder}}" placeholder-style="color:{{holderColor}}">
+		</textarea>
+		<text class='limit'>255</text>
+	</view>
+	<view class='bottom'>
+		<button catchtap='submit' hover-class="button_hover" class='submit'>提交评论</button>
+	</view>
+</view>

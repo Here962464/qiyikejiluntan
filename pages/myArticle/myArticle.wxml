@@ -9,7 +9,15 @@
 			<view>
 				<view catchtap='goToDetail' id="{{item.id}}" class='listItem' wx:for="{{info}}">
 					<view class='content'>
-						<view class='contentDetail'>{{item.title}}</view>
+						<view class='contentDetail'>
+							<text>{{item.title}}</text>
+							<text wx:if="{{item.OnExamine}}" class="onxamine">{{OnExamine}}</text>
+							<text wx:if="{{item.ExamineErr}}" class="examineerr">{{ExamineErr}}</text>
+						</view>
+						<view class='contentText'>
+							<text class='character'>我是容我是假的内容我是假的内容我是假的内容我是假的内容</text>
+							
+						</view>
 						<view class='baseInfo'>
 							<view class='parse'>{{item.comment_count}} 赞</view>
 							<view class='comment'>{{item.comment_count}} 评论</view>

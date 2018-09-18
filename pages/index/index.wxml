@@ -1,10 +1,13 @@
 <view class='top_tab' >
   	<view class="top_item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{info}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="switchTab">{{item.class_name}}</view>
 </view>
-<scroll-view bindscrolltolower="lazyLoad" style='height:{{clientHeight}}px;' class='sv'>
- 	<!-- <view class='zhanwei'></view> -->
-  	<swiper style='height:{{clientHeight}}px;' duration='500' current="{{currentNavtab}}" bindchange="swiperTab">
-    	<swiper-item wx:for="{{info}}">
+<view catchtap='writeAritcle' class='writeAritcle'>
+	<image src='../../images/write.png'></image>
+</view>
+<!-- <view class='zhanwei'></view> -->
+<swiper class='swiperclass' style='height:{{clientHeight}}px;' duration='500' current="{{currentNavtab}}" bindchange="swiperTab">
+	<swiper-item wx:for="{{info}}">
+		<scroll-view bindscrolltolower="lazyLoad" style='height:{{clientHeight}}px;' scroll-y white-space="nowrap" class='sv'>
 			<image class='item_icon' src='{{item.icon}}'></image>
 			<view wx:for-item="posts" id="{{posts.id}}" catchtap='toDetail'  wx:for="{{item.posts}}">
 				<view class='con'>
@@ -33,6 +36,6 @@
 				</view>
 				<view class='zhanwei'></view>
 			</view>
-    	</swiper-item>
-  </swiper>
-</scroll-view>
+		</scroll-view>
+	</swiper-item>
+</swiper>

@@ -67,5 +67,15 @@ Page({
 		wx.navigateTo({
 			url: '../articleDetail/articleDetail',
 		})
+	},
+	writeAritcle: function(){
+		var sid = app.globalData.sid;
+		if(sid == ""){
+			//弹授权框
+		}else{
+			wx.navigateTo({
+				url: '../write/write',
+			})
+		}
 	}
 })

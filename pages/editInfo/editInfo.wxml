@@ -1,0 +1,14 @@
+<view class='infoBox'>
+	<view catchtap='chooseAvatar' class='avatar'>
+		<text>头像</text>
+		<image src="{{avatar}}" class='avatar_img'></image>
+	</view>
+	<view catchtap='changeName' class='nickname'>
+		<text>昵称</text>
+		<text class='username'>{{nickname}}</text>
+	</view>
+	<view catchtap='changeInfo' class='info'>
+		<text>个人简介</text>
+		<text class='info_text'>{{info}}</text>
+	</view>
+</view>

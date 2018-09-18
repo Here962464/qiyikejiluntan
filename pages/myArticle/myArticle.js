@@ -2,7 +2,6 @@
 var app = getApp();
 var Url = app.globalData.globalUrl;
 Page({
-
 	/**
 	 * 页面的初始数据
 	 */
@@ -12,13 +11,19 @@ Page({
 		curHeight:0,
 		count:0,
 		hasBaseLine:false,
-		noArticle:false
+		noArticle:false,
+		OnExamine: "待审核...",
+		ExamineErr: "审核未通过!"
 	},
-
+	onShow: function(){
+		this.showtoast();
+		this.requestArticle()
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+		console.log(app.globalData.sid)
 		var that = this;
 		//获取屏幕高度
 		wx.getSystemInfo({
@@ -66,36 +71,39 @@ Page({
 			title: '提示',
 			content: '确定要删除文章及文章下的所有评论吗？',
 			success: function(e){
-				wx.request({
-					url: Url + '&do=api_posts&op=delete_posts&state=we7sid-' + 'da0b6795b0cdd8b39b2a6d4a39f18f10',
-					data:{
-						posts_id: postId
-					},
-					header: {
-						'content-type': 'application/json' // 默认值
-					},
-					success: function(res){
-						console.log(res.data)
-						if(res.data.code == 0){
-							wx.showToast({
-								title: '删除成功！',
-								icon:"success",
-								duration: 1000
-							})
-							//刷新页面数据
-							that.requestArticle()
-						}else{
-							wx.showToast({
-								title: res.data.msg,
-								icon: "success",
-								duration: 1000
-							})
+				console.log(e)
+				if(e.confirm == true){
+					wx.request({
+						url: Url + '&do=api_posts&op=delete_posts&state=we7sid-' + app.globalData.sid,
+						data:{
+							posts_id: postId
+						},
+						header: {
+							'content-type': 'application/json' // 默认值
+						},
+						success: function(res){
+							console.log(res.data)
+							if(res.data.code == 0){
+								wx.showToast({
+									title: '删除成功！',
+									icon:"success",
+									duration: 1000
+								})
+								//刷新页面数据
+								that.requestArticle()
+							}else{
+								wx.showToast({
+									title: res.data.msg,
+									icon: "loading",
+									duration: 1000
+								})
+							}
+						},
+						fail: function(err){
+							console.log(err)
 						}
-					},
-					fail: function(err){
-						console.log(err)
-					}
-				})
+					})
+				}
 			}
 		})
 	},
@@ -116,7 +124,7 @@ Page({
 	requestArticle: function(){
 		var that = this;
 		wx.request({
-			url: Url + '&do=api_posts&op=get_my_posts&state=we7sid-' + 'da0b6795b0cdd8b39b2a6d4a39f18f10',
+			url: Url + '&do=api_posts&op=get_my_posts&state=we7sid-' + app.globalData.sid,
 			data: {
 				limit1: 0,
 				limit2: that.data.end
@@ -127,7 +135,6 @@ Page({
 			success: function (res) {
 				wx.hideToast();
 				console.log(res.data)
-				
 				if (res.data.code == 0) {
 					//判断有没有文章
 					if (res.data.count.count == "0") {
@@ -137,6 +144,20 @@ Page({
 					} else {
 						var tempArray = res.data.data;
 						for (var i = 0; i < tempArray.length; i++) {
+							//判断审核状态
+							if (tempArray[i].isshow == 0) {
+								// 审核中
+								tempArray[i].OnExamine = true;
+								tempArray[i].ExamineErr = false;
+							} else if (tempArray[i].isshow == 1) {
+								// 审核通过
+								tempArray[i].OnExamine = false;
+								tempArray[i].ExamineErr = false;
+							} else if (tempArray[i].isshow == 2) {
+								// 审核未通过
+								tempArray[i].OnExamine = false;
+								tempArray[i].ExamineErr = true;
+							}
 							// 判断nickName是否为空
 							if (tempArray[i].nickname == "") {
 								tempArray[i]["userName"] = tempArray[i].user_name

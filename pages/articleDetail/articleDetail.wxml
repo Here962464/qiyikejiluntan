@@ -1,11 +1,48 @@
-<import src="wxParse/wxParse.wxml"/>
 <view class='blogDetails'>
-  <view class='blogTitle'>{{title}}</view>
-  <view class='floor1'>
-    <!-- <view class='blogNature'>{{nature}}</view> -->
-    <view class='classAA'>{{class_name}}</view>
-    <!-- <view class='classAa'>{{classAa}}</view> -->
-  </view>
-  <view class='blogUpdateDate'>{{create_time}}</view>
-  <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+	<view class='blogTitle'>{{title}}</view>
+	<!-- <view class='floor1'> -->
+		<!-- <view class='blogNature'>{{nature}}</view> -->
+		<!-- <view class='classAA'>{{class_name}}</view> -->
+		<!-- <view class='classAa'>{{classAa}}</view> -->
+	<!-- </view> -->
+	<view class='blogUpdateDate'>{{create_time}}</view>
+	<view class='rich-text-wrp'>
+		<rich-text class='content' nodes="{{nodes}}" bindtap="tap"></rich-text>
+	</view>
+	<view class='showConmment'>
+		<view class='hasConmment'>
+			<view class='conmmentAmount'>{{conmmentCount}} 评论</view>
+			<view class='conmmen_item'>
+				<view class='conmmentBlock' wx:for='{{conmmentArr}}'>
+					<view class='top'>
+						<image class='avatar' src='{{item.avatar}}'></image>
+						<view class='right'>
+							<view>
+								<text class='nickName'>{{item.user_name}}</text>
+								<text class='reply'> 回复了 </text>
+								<text class='nickName'>{{item.puser_name}}</text>
+							</view>
+							<view class='time'>{{item.create_time}}</view>
+						</view>
+					</view>
+					<view class='conmmentContent'><rich-text nodes="{{item.content}}"></rich-text></view>
+					<view class='toConmmentBox'>
+						<view catchtap='replyConmment' class='toConmment' data-user_name="{{item.user_name}}" data-posts_id="{{item.posts_id}}" data-pid="{{item.id}}" data-uid="{{item.user_id}}">
+							<image src='../../images/conmment.png'></image> 评论
+						</view>
+						<view data-ifParse="true" data-hasClass="false" catchtap='replyParse' class='toParse' data-user_name="{{item.user_name}}" data-posts_id="{{item.posts_id}}" data-id="{{item.id}}" data-uid="{{item.user_id}}">
+							<image src='../../images/parse.png'></image> 共 {{item.pares}} 个赞
+						</view>
+						<view catchtap='deleteConmment' wx:if="{{item.ifYou}}" class='toDelete' data-user_name="{{item.user_name}}" data-posts_id="{{item.posts_id}}" data-id="{{item.id}}"  data-uid="{{item.user_id}}">
+							<image src='../../images/delete.png'></image> 删除
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='conmmentBox'>
+		<view catchtap='conmment' class='conmment'><image src='../../images/conmment.png'></image> 评论</view>
+		<view catchtap='parse' class='parse'><image src='../../images/parse.png'></image> 赞</view>
+	</view>
 </view> 

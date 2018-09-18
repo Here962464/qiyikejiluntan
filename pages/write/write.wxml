@@ -1,6 +1,23 @@
 <view class="section">
-  <form bindsubmit="bindFormSubmit">
-    <textarea auto-height='true' class='textContent' placeholder="form 中的 textarea" name="textarea"/>
-    <button size="mini" hover-class="confirm_after" class='confirm' form-type="submit"> 发布 </button>
-  </form>
+	<view class='line'></view>
+	<form>
+		<!-- 提交按钮 -->
+		<button size="mini" catchtap='bindFormSubmit' hover-class="confirm_after" class='confirm' form-type="submit"> 发布 </button>
+		<view class='title'>
+			文章标题：
+			<input bindblur="getTitle" bindfocus='mentionTitle' placeholder='{{titleHolder}}' placeholder-class="{{titleHolderStyle}}" maxlength="{{titleMax}}"   value="{{title}}"></input>
+			<text class='titleMax'>{{titleMax}}</text>
+		</view>
+		<view class='classifyBox'>
+			<view class='choose'>文章分类：</view>
+			<picker-view bindchange="chooseClassify" class='pickerBox' indicator-class="pickerBox_item">
+				<picker-view-column>
+					<view id="{{item.id}}" data-pid="{{item.pid}}" wx:for="{{objectArray}}">{{item.name}}</view>
+				</picker-view-column>
+			</picker-view>
+		</view>
+		<view class='content'>
+			<textarea value="{{content}}" bindblur="getContent" bindfocus='mentionContent' placeholder-style="color:{{contentHolderColor}}" show-confirm-bar="{{false}}" maxlength="-1" auto-height='true' class='textContent' placeholder="{{contentHolder}}" name="textarea"/>
+		</view>
+	</form>
 </view>
